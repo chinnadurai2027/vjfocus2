@@ -74,7 +74,7 @@ A revolutionary productivity web app that combines task management, pomodoro tec
 
 ### **One-Command Setup**
 ```bash
-git clone https://github.com/yourusername/vjfocus2.git
+git clone https://github.com/chinnadurai2027/vjfocus2.git
 cd vjfocus2
 npm run setup
 ```
@@ -83,7 +83,7 @@ npm run setup
 
 1. **Clone and Install**
    ```bash
-   git clone https://github.com/yourusername/vjfocus2.git
+   git clone https://github.com/chinnadurai2027/vjfocus2.git
    cd vjfocus2
    npm run install:all
    ```
@@ -368,8 +368,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 **Support & Community**
 
-- 🐛 **Bug Reports**: [GitHub Issues](https://github.com/yourusername/vjfocus2/issues)
-- 💡 **Feature Requests**: [GitHub Discussions](https://github.com/yourusername/vjfocus2/discussions)
+- 🐛 **Bug Reports**: [GitHub Issues](https://github.com/chinnadurai2027/vjfocus2/issues)
+- 💡 **Feature Requests**: [GitHub Discussions](https://github.com/chinnadurai2027/vjfocus2/discussions)
 - 📧 **Contact**: your.email@example.com
 
 ---
