@@ -8,7 +8,9 @@ import AmbientSounds from './AmbientSounds'
 import FocusPrediction from './FocusPrediction'
 import WeeklyTaskCapsule from './WeeklyTaskCapsule'
 import StudyPersonalityReport from './StudyPersonalityReport'
-import { LogOut, BarChart3, CheckSquare, Timer, Brain, Volume2, Package, User } from 'lucide-react'
+import SocialDashboard from './SocialDashboard'
+import NotificationCenter from './NotificationCenter'
+import { LogOut, BarChart3, CheckSquare, Timer, Brain, Volume2, Package, User, Users } from 'lucide-react'
 import axios from 'axios'
 
 const Dashboard = () => {
@@ -34,6 +36,7 @@ const Dashboard = () => {
   const tabs = [
     { id: 'tasks', label: 'Tasks', icon: CheckSquare },
     { id: 'pomodoro', label: 'Pomodoro', icon: Timer },
+    { id: 'social', label: 'Social', icon: Users },
     { id: 'focus', label: 'Focus AI', icon: Brain },
     { id: 'ambient', label: 'Sounds', icon: Volume2 },
     { id: 'personality', label: 'Profile', icon: User },
@@ -55,13 +58,16 @@ const Dashboard = () => {
               <h1 className="text-2xl font-bold text-gray-900">VJFocus2</h1>
               <span className="ml-4 text-gray-600">Welcome, {user?.username}</span>
             </div>
-            <button
-              onClick={handleLogout}
-              className="flex items-center space-x-2 text-gray-600 hover:text-gray-900 transition-colors"
-            >
-              <LogOut className="w-5 h-5" />
-              <span>Logout</span>
-            </button>
+            <div className="flex items-center space-x-4">
+              <NotificationCenter />
+              <button
+                onClick={handleLogout}
+                className="flex items-center space-x-2 text-gray-600 hover:text-gray-900 transition-colors"
+              >
+                <LogOut className="w-5 h-5" />
+                <span>Logout</span>
+              </button>
+            </div>
           </div>
         </div>
       </header>
@@ -110,6 +116,9 @@ const Dashboard = () => {
             }}
             onTimerStateChange={setIsTimerActive}
           />
+        )}
+        {activeTab === 'social' && (
+          <SocialDashboard />
         )}
         {activeTab === 'focus' && (
           <FocusPrediction 

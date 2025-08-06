@@ -4,6 +4,8 @@ import cookieParser from 'cookie-parser'
 import dotenv from 'dotenv'
 import authRoutes from './routes/auth.js'
 import taskRoutes from './routes/tasks.js'
+import socialRoutes from './routes/social.js'
+import meetingRoutes from './routes/meetings.js'
 import { initDatabase } from './database/init.js'
 
 dotenv.config()
@@ -22,6 +24,8 @@ app.use(cookieParser())
 // Routes
 app.use('/api/auth', authRoutes)
 app.use('/api/tasks', taskRoutes)
+app.use('/api/social', socialRoutes)
+app.use('/api/meetings', meetingRoutes)
 
 // Health check
 app.get('/api/health', (req, res) => {
